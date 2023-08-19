@@ -255,7 +255,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="btnHapusB">Yakin</button>
+                <button type="button" class="btn btn-primary" id="btnHapus">Yakin</button>
             </div>
         </div>
     </div>
