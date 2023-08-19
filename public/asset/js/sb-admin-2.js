@@ -89,16 +89,16 @@
   });
 
   // Modal handling Data Bia
-  var idDataHapus3;
+  var idDataHapusB;
   $("button#btn-hapus").click(function () {
-    idDataHapus3 = $(this).data("id");
-    console.log(idDataHapus3);
-    $("#idData").text(idDataHapus3);
+    idDataHapusB = $(this).data("id");
+    console.log(idDataHapusB);
+    $("#idData").text(idDataHapusB);
     $("#modalHapus").modal("show");
   });
 
-  $("#btnHapus").click(function () {
-    window.location.href = "bia/hapus/" + idDataHapus3;
+  $("#btnHapusB").click(function () {
+    window.location.href = "bia/hapus/" + idDataHapusB;
   });
 
   
