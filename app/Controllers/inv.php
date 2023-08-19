@@ -103,6 +103,8 @@ class Inv extends Controller
                 echo view('inv/index', $data);
                 echo view('templates/v_footer');
             } else {
+                $id = $this->request->getPost('id');
+                
                 $data = [
                     'namadat' => $this->request->getPost('namadat'),
                     'media' => $this->request->getPost('media'),
@@ -127,16 +129,16 @@ class Inv extends Controller
     public function hapus($id)
     {
 
+
         if (!$this->auth->check()) {
             $redirectURL = session('redirect_url') ?? '/login';
             unset($_SESSION['redirect_url']);
 
-            return redirect()   
-                ->to($redirectURL);
+            return redirect()->to($redirectURL);
         }
 
         // Memanggil fungsi hapus pada model dan menyimpan hasilnya dalam variabel $success
-        $this->model->hapus($id);
+        $success = $this->model->hapus($id);
         session()->setFlashdata('message', 'Data berhasil dihapus');
         
             // Redirect pengguna ke halaman "/bisnis"
