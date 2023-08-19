@@ -39,7 +39,7 @@ class Inv extends Controller
         
     }
     
-    public function tambah()
+    public function tambahI()
     {
 
         if (!$this->auth->check()) {
@@ -50,7 +50,7 @@ class Inv extends Controller
                 ->to($redirectURL);
         }
 
-        if (isset($_POST['tambah'])){
+        if (isset($_POST['tambahI'])){
             $val = $this->validate([
                 'namadat' => [
                     'label' => 'Nama Data',
@@ -103,6 +103,7 @@ class Inv extends Controller
                 echo view('inv/index', $data);
                 echo view('templates/v_footer');
             } else {
+                
                 $data = [
                     'namadat' => $this->request->getPost('namadat'),
                     'media' => $this->request->getPost('media'),
@@ -113,7 +114,7 @@ class Inv extends Controller
         
                 // Insert data
                 $this->model->checkIncrement();
-                $success = $this->model->tambah($data);
+                $success = $this->model->tambahI($data);
                 if ($success) {
                     session()->setFlashdata('message', 'Data Inventaris berhasil ditambahkan ');
                     return redirect()->to(base_url('inv'));
@@ -127,12 +128,12 @@ class Inv extends Controller
     public function hapus($id)
     {
 
+
         if (!$this->auth->check()) {
             $redirectURL = session('redirect_url') ?? '/login';
             unset($_SESSION['redirect_url']);
 
-            return redirect()   
-                ->to($redirectURL);
+            return redirect()->to($redirectURL);
         }
 
         // Memanggil fungsi hapus pada model dan menyimpan hasilnya dalam variabel $success

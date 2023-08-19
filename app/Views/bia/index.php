@@ -113,7 +113,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Ubah<?= $judul;?> </h5>
+                <h5 class="modal-title">Ubah <?= $judul;?> </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -122,16 +122,16 @@
                 <form action="<?= base_url('bia/ubah'); ?>" method="post">
                 <input type="hidden" name="id" id="id-bia">
                 <div class="form-group">
-                    <label for="sub_ordinat">Input Sub Ordinat:</label>
-                    <select name="subordinat" id="subordinat">
+                    <label for="subordinat">Input Sub Ordinat:</label>
+                    <select name="sub_ordinat" id="subordinat">
                         <?php foreach ($bisnis as $row) : ?>
                             <option value="<?= $row['ordinat']; ?>"><?= $row['ordinat']; ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="proses_bisnis">Input Form Bisnis:</label>
-                    <select name="proses" id="proses">
+                    <label for="proses">Input Form Bisnis:</label>
+                    <select name="proses_bisnis" id="proses_bisnis">
                         <?php foreach ($bisnis as $row) : ?>
                             <option value="<?= $row['bis']; ?>"><?= $row['bis']; ?></option>
                         <?php endforeach; ?>
@@ -140,70 +140,81 @@
                 <div class="form-group">
                     <label for="kredit">Input Kredit: </label>
                     <select name="kredit" id="kredit">
-                        <?php foreach ($bia as $row) : ?>
-                            <option value="<?= $row['kredit']; ?>"><?= $row['kredit']; ?></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-                        <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="pasar">Input Pasar: </label>
                     <select name="pasar" id="pasar">
-                        <?php foreach ($bia as $row) : ?>
-                            <option value="<?= $row['pasar']; ?>"><?= $row['pasar']; ?></option>
-                        <?php endforeach; ?>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="liquiditas">Input Likuiditas: </label>
                     <select name="liquiditas" id="liquiditas">
-                        <?php foreach ($bia as $row) : ?>
-                            <option value="<?= $row['liquiditas']; ?>"><?= $row['liquiditas']; ?></option>
-                        <?php endforeach; ?>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="operasional">Input Operasional: </label>
                     <select name="operasional" id="operasional">
-                        <?php foreach ($bia as $row) : ?>
-                            <option value="<?= $row['operasional']; ?>"><?= $row['operasional']; ?></option>
-                        <?php endforeach; ?>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="kepatuhan">Input Kepatuhan: </label>
                     <select name="kepatuhan" id="kepatuhan">
-                        <?php foreach ($bia as $row) : ?>
-                            <option value="<?= $row['kepatuhan']; ?>"><?= $row['kepatuhan']; ?></option>
-                        <?php endforeach; ?>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="hukum">Input Hukum: </label>
                     <select name="hukum" id="hukum">
-                        <?php foreach ($bia as $row) : ?>
-                            <option value="<?= $row['hukum']; ?>"><?= $row['hukum']; ?></option>
-                        <?php endforeach; ?>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="reputasi">Input Reputasi: </label>
                     <select name="reputasi" id="reputasi">
-                        <?php foreach ($bia as $row) : ?>
-                            <option value="<?= $row['reputasi']; ?>"><?= $row['reputasi']; ?></option>
-                        <?php endforeach; ?>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="strategi">Input Strategi: </label>
                     <select name="strategi" id="strategi">
-                        <?php foreach ($bia as $row) : ?>
-                            <option value="<?= $row['strategi']; ?>"><?= $row['strategi']; ?></option>
-                        <?php endforeach; ?>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                     </select>
                 </div>
 
@@ -233,16 +244,16 @@
             <div class="modal-body">
                 <form action="<?= base_url('bia/tambah'); ?>" method="post">
                 <div class="form-group">
-                    <label for="subordinat">Input Sub Ordinat:</label>
-                    <select name="subordinat" id="subordinat">
+                    <label for="sub_ordinat">Input Sub Ordinat:</label>
+                    <select name="sub_ordinat" id="sub_ordinat">
                         <?php foreach ($bisnis as $row) : ?>
                             <option value="<?= $row['ordinat']; ?>"><?= $row['ordinat']; ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="proses">Input Proses Bisnis: </label>
-                    <select name="proses" id="proses">
+                    <label for="proses_bisnis">Input Proses Bisnis: </label>
+                    <select name="proses_bisnis" id="proses_bisnis">
                         <?php foreach ($bisnis as $row) : ?>
                             <option value="<?= $row['bis']; ?>"><?= $row['bis']; ?></option>
                         <?php endforeach; ?>

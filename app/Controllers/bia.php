@@ -55,14 +55,14 @@ class Bia extends Controller
 
         if (isset($_POST['tambah'])){
             $val = $this->validate([
-                'subordinat' => [
+                'sub_ordinat' => [
                     'label' => 'Sub Ordinat',
                     'rules' => 'required',
                     'errors' => [
                         'required' => '{field} tidak boleh kosong.'
                     ]
                 ],
-                'proses' => [
+                'proses_bisnis' => [
                     'label' => 'Proses Bisnis',
                     'rules' => 'required',
                     'errors' => [
@@ -142,8 +142,8 @@ class Bia extends Controller
                 echo view('templates/v_footer');
             } else {
                 $data = [
-                    'sub_ordinat' => $this->request->getPost('subordinat'),
-                    'proses_bisnis' => $this->request->getPost('proses'),
+                    'sub_ordinat' => $this->request->getPost('sub_ordinat'),
+                    'proses_bisnis' => $this->request->getPost('proses_bisnis'),
                     'kredit' => $this->request->getPost('kredit'),
                     'pasar' => $this->request->getPost('pasar'),
                     'liquiditas' => $this->request->getPost('likuiditas'),
@@ -202,14 +202,14 @@ class Bia extends Controller
 
         if (isset($_POST['ubah'])){
             $val = $this->validate([
-                'subordinat' => [
+                'sub_ordinat' => [
                     'label' => 'Sub Ordinat',
                     'rules' => 'required',
                     'errors' => [
                         'required' => '{field} tidak boleh kosong.'
                     ]
                 ],
-                'proses' => [
+                'proses_bisnis' => [
                     'label' => 'Proses Bisnis',
                     'rules' => 'required',
                     'errors' => [
@@ -301,9 +301,11 @@ class Bia extends Controller
                     'hukum' => $this->request->getPost('hukum'),
                     'reputasi' => $this->request->getPost('reputasi'),
                     'strategi' => $this->request->getPost('strategi'),
-                    'total' => $this->request->getPost('total'),
                 ];
-        
+
+                $data['total'] = (int)$data['kredit'] + (int)$data['pasar'] + (int)$data['liquiditas'] + (int)$data['operasional'] + (int)$data['kepatuhan']
+                + (int)$data['hukum'] + (int)$data['reputasi'] + (int)$data['strategi'];
+                
                 // Update data
                 $success = $this->model->ubah($data, $id);
                 if ($success) {

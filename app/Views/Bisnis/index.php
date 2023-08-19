@@ -178,8 +178,6 @@
                     <label for="apps">Input aplikasi yang digunakan: </label>
                     <input type="text" name="apps" id="apps" class="form-control">
                 </div>
-                
-                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

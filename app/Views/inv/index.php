@@ -145,10 +145,10 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="<?= base_url('inv/tambah'); ?>" method="post">
+                <form action="<?= base_url('inv/tambahI'); ?>" method="post">
                 <div class="form-group">
                     <label for="inv">Input Nama Data:</label>
-                    <input type="text" name="inv" id="inv" class="form-control">
+                    <input type="text" name="namadat" id="namadat" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="media">Input Media Penyimpanan: </label>
@@ -171,7 +171,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" name="tambah" class="btn btn-primary">Tambah Data</button>
+                <button type="submit" name="tambahI" class="btn btn-primary">Tambah Data</button>
             </div>
             </form>
         </div>
@@ -179,15 +179,15 @@
 </div>
 
 <!-- Modal Hapus data bisnis -->
-<div class="modal fade" id="modalHapus">
+<div class="modal fade" id="modalHapusI">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                Apakah anda yakin ingin menghapus data no-<span id="idData"></span>?
+                Apakah anda yakin ingin menghapus data no-<span id="idDataI"></span>?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="btnHapus">Yakin</button>
+                <button type="button" class="btn btn-primary" id="btnHapusI">Yakin</button>
             </div>
         </div>
     </div>

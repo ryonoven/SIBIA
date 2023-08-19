@@ -42,6 +42,7 @@
                 <!-- Table header -->
                 <thead>
                     <tr>
+                        <th>NO</th>
                         <th>APLIKASI TI YANG DIGUNAKAN</th>
                         <th>RTO</th>
                         <th>DATA YANG DIHASILKAN</th>
@@ -67,6 +68,7 @@
                     <?php } else { ?>
                     <?php foreach ($bia2 as $row) : ?>
                         <tr>
+                            <td scope="row"><?= $row['id']; ?></td>
                             <td><?= $row['appsti'] ?></td>
                             <td><?= $row['rto'] ?></td>
                             <td><?= $row['datahasil'] ?></td>
@@ -75,7 +77,7 @@
                             <td><?= $row['puncak'] ?></td>
                             <td>
                                 <!-- Button to trigger confirmation modal -->
-                                <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit"class="btn btn-sm btn-warning" style="font-weight: 600;" data-appsti="<?= $row['appsti']; ?>"data-rto="<?= $row['rto']; ?>" data-datahasil="<?= $row['datahasil']; ?>" data-rpo="<?= $row['rpo']; ?>" data-mtd="<?= $row['mtd']; ?>" data-puncak="<?= $row['puncak']; ?>" ><i class="fa fa-edit"></i>&nbsp;Edit</button>
+                                <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit"class="btn btn-sm btn-warning" style="font-weight: 600;" data-id="<?= $row['id']; ?>" data-appsti="<?= $row['appsti']; ?>"data-rto="<?= $row['rto']; ?>" data-datahasil="<?= $row['datahasil']; ?>" data-rpo="<?= $row['rpo']; ?>" data-mtd="<?= $row['mtd']; ?>" data-puncak="<?= $row['puncak']; ?>" ><i class="fa fa-edit"></i>&nbsp;Edit</button>
                                 <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-sm btn-danger" style="font-weight: 600;" data-id="<?= $row['id']; ?>"> <i class="fa fa-trash-alt"></i>&nbsp;Hapus</button>
                             </td>
                         </tr>
@@ -115,9 +117,6 @@
                 <div class="form-group">
                     <label for="rto">RTO: </label>
                     <select name="rto" id="rto">
-                        <?php foreach ($bia2 as $row) : ?>
-                            <option value="<?= $row['rto']; ?>"><?= $row['rto']; ?></option>
-                        <?php endforeach; ?>
                         <option value="< 1 Jam">< 1 Jam</option>
                         <option value="< 4 Jam">< 4 Jam</option>
                         <option value="< 1 Hari">< 1 Hari</option>
@@ -136,11 +135,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="rpo">RTO: </label>
+                    <label for="rpo">RPO: </label>
                     <select name="rpo" id="rpo">
-                        <?php foreach ($bia2 as $row) : ?>
-                            <option value="<?= $row['rpo']; ?>"><?= $row['rpo']; ?></option>
-                        <?php endforeach; ?>
                         <option value="< 1 Jam">< 1 Jam</option>
                         <option value="< 4 Jam">< 4 Jam</option>
                         <option value="< 1 Hari">< 1 Hari</option>
@@ -150,11 +146,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="mtd">RTO: </label>
+                    <label for="mtd">MTD: </label>
                     <select name="mtd" id="mtd">
-                        <?php foreach ($bia2 as $row) : ?>
-                            <option value="<?= $row['mtd']; ?>"><?= $row['mtd']; ?></option>
-                        <?php endforeach; ?>
                         <option value="< 1 Jam">< 1 Jam</option>
                         <option value="< 4 Jam">< 4 Jam</option>
                         <option value="< 1 Hari">< 1 Hari</option>
@@ -204,9 +197,6 @@
                 <div class="form-group">
                     <label for="rto">RTO: </label>
                     <select name="rto" id="rto" class="form-control">
-                        <?php foreach ($bia2 as $row) : ?>
-                            <option value="<?= $row['rto']; ?>"><?= $row['rto']; ?></option>
-                        <?php endforeach; ?>
                         <option value="< 1 Jam">< 1 Jam</option>
                         <option value="< 4 Jam">< 4 Jam</option>
                         <option value="< 1 Hari">< 1 Hari</option>
@@ -223,11 +213,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="rpo">RTO: </label>
+                    <label for="rpo">RPO: </label>
                     <select name="rpo" id="rpo" class="form-control">
-                        <?php foreach ($bia2 as $row) : ?>
-                            <option value="<?= $row['rpo']; ?>"><?= $row['rpo']; ?></option>
-                        <?php endforeach; ?>
                         <option value="< 1 Jam">< 1 Jam</option>
                         <option value="< 4 Jam">< 4 Jam</option>
                         <option value="< 1 Hari">< 1 Hari</option>
@@ -236,11 +223,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="mtd">RTO: </label>
+                    <label for="mtd">MTD: </label>
                     <select name="mtd" id="mtd" class="form-control">
-                        <?php foreach ($bia2 as $row) : ?>
-                            <option value="<?= $row['mtd']; ?>"><?= $row['mtd']; ?></option>
-                        <?php endforeach; ?>
                         <option value="< 1 Jam">< 1 Jam</option>
                         <option value="< 4 Jam">< 4 Jam</option>
                         <option value="< 1 Hari">< 1 Hari</option>

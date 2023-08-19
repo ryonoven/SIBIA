@@ -31,7 +31,7 @@ class M_inv extends Model
         return $this->builder->get()->getResultArray();
     }
 
-    public function tambah($data)
+    public function tambahI($data)
     {
         return $this->builder->insert($data);
     }

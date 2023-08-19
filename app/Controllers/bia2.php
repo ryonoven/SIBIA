@@ -216,7 +216,7 @@ class Bia2 extends Controller
                 session()->setFlashdata('err', \Config\Services::validation()->listErrors());
                 $data = [
                     'judul' => 'Data Bia Lanjutan',
-                    'bia' => $this->model->getAllData()
+                    'bia2' => $this->model->getAllData()
                 ];
         
                 echo view('templates/v_header', $data);
