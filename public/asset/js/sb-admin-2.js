@@ -101,16 +101,5 @@
     window.location.href = "bia/hapus/" + idDataHapus3;
   });
 
-  // Modal handling Data Bia2
-  var idDataHapus4;
-  $("button#btn-hapus").click(function () {
-    idDataHapus4 = $(this).data("id");
-    console.log(idDataHapus4);
-    $("#idData").text(idDataHapus4);
-    $("#modalHapus").modal("show");
-  });
-
-  $("#btnHapus").click(function () {
-    window.location.href = "bia2/hapus/" + idDataHapus4;
-  });
+  
 })(jQuery);
